@@ -11,6 +11,10 @@
     "chai": "^4.2.0",
     "chai-as-promised": "^7.1.1",
     "mocha": "^8.2.0",
+    "nock": "^13.0.4",
     "sinon": "^9.2.0"
+  },
+  "dependencies": {
+    "xmlhttprequest": "^1.8.0"
   }
 }
