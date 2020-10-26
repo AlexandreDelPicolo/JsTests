@@ -22,6 +22,13 @@ class MyClass {
   callTheCallback(callback) {
     callback();
   }
+
+  async testPromise() {
+    const result = await new Promise((resolve, reject) => {
+      setTimeout(() => resolve(3), 4000);
+    });
+    return result * 2;
+  }
 }
 
 module.exports = MyClass;
