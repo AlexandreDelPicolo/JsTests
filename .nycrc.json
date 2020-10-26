@@ -1,0 +1,10 @@
+{
+  "include": "src",
+  "exclude": "specs",
+  "check-coverage": true,
+  "lines": 90,
+  "functions": 90,
+  "branchs": 90,
+  "statements": 90,
+  "report-dir": "./reports"
+}

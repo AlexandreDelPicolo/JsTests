@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "mocha './specs/**/*.spec.js'"
+    "test": "mocha './specs/**/*.spec.js'",
+    "coverage": "nyc --reporter=lcov --reporter=text npm run test"
   },
   "repository": "git@github.com:AlexandreDelPicolo/JsTests.git",
   "license": "MIT",
@@ -12,6 +13,7 @@
     "chai-as-promised": "^7.1.1",
     "mocha": "^8.2.0",
     "nock": "^13.0.4",
+    "nyc": "^15.1.0",
     "sinon": "^9.2.0"
   },
   "dependencies": {
