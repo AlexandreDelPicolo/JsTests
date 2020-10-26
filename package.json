@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "mocha './specs/**/*.spec.js'",
+    "tests": "mocha './specs/**/*.spec.js'",
+    "tests:debug": "mocha './specs/**/*.spec.js' --watch",
     "coverage": "nyc --reporter=lcov --reporter=text npm run test"
   },
   "repository": "git@github.com:AlexandreDelPicolo/JsTests.git",
