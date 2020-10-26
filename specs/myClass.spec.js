@@ -9,7 +9,10 @@ const myObj = new MyClass();
 
 chai.use(chaiaspromise);
 
-describe.skip('Test suit', () => {
+describe('Test suit', () => {
+  
+  beforeEach(() => sinon.restore());
+
   it('Test the add method', () => {
     expect(myObj.add(1, 2)).to.be.equal(3);
   });
@@ -39,7 +42,7 @@ describe.skip('Test suit', () => {
   });
 });
 
-describe.skip('Test suit for stub', () => {
+describe('Test suit for stub', () => {
   it('Stub the add method', () => {
     const stub = sinon.stub(myObj, 'add');
     stub.withArgs(10, 20)
@@ -50,9 +53,9 @@ describe.skip('Test suit for stub', () => {
   });
 });
 
-describe.skip("Test the promise", function () {
+describe("Test the promise", function () {
   it("Promise test case", function (done) {
-    this.timeout(4000);
+    this.timeout(5000);
     myObj.testPromise().then(function (result) {
       expect(result).to.be.equal(6);
       done();
@@ -60,7 +63,7 @@ describe.skip("Test the promise", function () {
   });
 });
 
-describe.skip('Test the promise', () => {
+describe('Test the promise', () => {
   it('Promise test case', function () {
     this.timeout(0);
     return expect(myObj.testPromise()).to.eventually.equal(6);
